@@ -1,7 +1,8 @@
-import * as React from "react";
+import React from "react";
+import { Svg } from './styles'
 
 export const Logo = (props) => (
-    <svg
+    <Svg
         xmlns="http://www.w3.org/2000/svg"
         width={386.787}
         height={122}
@@ -24,7 +25,7 @@ export const Logo = (props) => (
                 <stop offset={0} stopColor="red" />
                 <stop offset={0.17} stopColor="#f90" />
                 <stop offset={0.34} stopColor="#ff4" />
-                <stop offset={0.51} stopColor="#9f0" />
+                <stop offset={0.51} stopColor="#6f0" />
                 <stop offset={0.68} stopColor="#09f" />
                 <stop offset={0.85} stopColor="#00f" />
                 <stop offset={1} stopColor="#90f" />
@@ -62,5 +63,5 @@ export const Logo = (props) => (
                 transform="translate(118.416 101.21)"
             />
         </g>
-    </svg>
+    </Svg>
 );
