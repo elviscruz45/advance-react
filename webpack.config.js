@@ -4,7 +4,7 @@ module.exports = {
   output: {
     filename: 'app.bundle.js'
   },
-  mode: 'development',
+  mode: 'production',
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html'

@@ -1,36 +1,19 @@
 import React, {useEffect,useRef,useState,Fragment} from 'react'
 import { ImgWrapper, Img, Button,Article } from './styles'
-import { MdFavoriteBorder } from 'react-icons/md'
+import { MdFavoriteBorder,MdFavorite } from 'react-icons/md'
+import { useLocalStorage } from '../../hooks/useLocalStorage'
+import { useNearScreen } from '../../hooks/useNearScreen'
 
 const DEFAULT_IMAGE = 'https://res.cloudinary.com/midudev/image/upload/w_150/v1555671700/category_hamsters.jpg'
 
+
+
 export const PhotoCard = ({ id, likes = 0, src = DEFAULT_IMAGE }) => {
-  const element = useRef(null)
-  const [show,setShow]=useState(false)
+  const key =`like-${id}`
+  const [liked,setLiked]=useLocalStorage(key,false)
+  const [show,element]=useNearScreen()
 
-  useEffect(function(){
-    Promise.resolve(
-      typeof window.IntersectionObserver !=='undefined'
-      ? window.IntersectionObserver
-      : import('intersection-observer')
-      ).then(()=>{
-      const observer=new window.IntersectionObserver(
-      function (entries){
-        const {isIntersecting}= entries[0]
-        
-        console.log(isIntersecting)
-
-        if(isIntersecting){
-          setShow(true)
-          observer.disconnect()
-        }
-      })
-    observer.observe(element.current)
-    })
-
-    
-  },[element])
-
+  const Icon=liked? MdFavorite:MdFavoriteBorder
 
   return (
     <Article ref={element}>
@@ -41,8 +24,8 @@ export const PhotoCard = ({ id, likes = 0, src = DEFAULT_IMAGE }) => {
               <Img src={src} />
             </ImgWrapper>
           </a>
-          <Button>
-            <MdFavoriteBorder size='32px' />{likes} Likes!
+          <Button onClick={()=>setLiked(!liked)}>
+            <Icon size='32px' />{likes} Likes!
           </Button>
 
     </Fragment>
