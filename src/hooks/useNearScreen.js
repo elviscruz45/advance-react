@@ -1,4 +1,4 @@
-import {useEffect,useState} from "react"
+import {useEffect,useState, useRef} from "react"
 
 export function useNearScreen(){
     const element = useRef(null)
