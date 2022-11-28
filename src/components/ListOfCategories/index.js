@@ -18,7 +18,6 @@ function useCategoriesData(){
     })
   },[])
   return {categories,loading}
-  
 }
 
 export const ListOfCategories = () => {

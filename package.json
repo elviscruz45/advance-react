@@ -4,6 +4,7 @@
   "description": "**¡Sígueme en Youtube para más contenido de React y Javascript!** 👉 https://www.youtube.com/midudev",
   "main": "index.js",
   "scripts": {
+    "vercel-build": "npm run build",
     "build": "webpack",
     "lint": "standard",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -32,6 +33,9 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.1",
+    "apollo-boost": "^0.4.9",
+    "graphql": "^15.8.0",
     "intersection-observer": "^0.12.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -44,7 +48,7 @@
     ]
   },
   "eslintConfig": {
-    "parser":"babel-eslint",
+    "parser": "babel-eslint",
     "extends": [
       "./node_modules/standard/eslintrc.json"
     ]

@@ -1,10 +1,25 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { App } from './App'
+import { ApolloProvider,ApolloClient,InMemoryCache } from '@apollo/client'
+
+
+const client=new ApolloClient({
+    uri:"https://petgram-server.midudev.now.sh/graphql",
+    cache: new InMemoryCache(),
+
+})
+
+
 
 const container = document.getElementById('app')
 const root = createRoot(container)
-root.render(<App />)
+root.render(
+    <ApolloProvider client={client}>
+    <App />
+    </ApolloProvider>)
+
+
 
 //  import React from "react"
 //  import {createRoot} from "react-dom/client"
