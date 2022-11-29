@@ -24,5 +24,4 @@ const ListOfPhotoCardsComponent = ({data:{photos=[]}}={}) => {
   )
 }
 
-export const ListOfPhotoCards=withPhotos
-(ListOfPhotoCardsComponent)
+export const ListOfPhotoCards=withPhotos(ListOfPhotoCardsComponent)
