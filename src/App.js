@@ -10,7 +10,6 @@ export const App = () =>
   {
     const urlParams=new window.URLSearchParams(window.location.search)
     const detailId=urlParams.get('detail')
-    console.log(detailId)
 
 
     return (
