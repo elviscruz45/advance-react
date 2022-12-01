@@ -1,7 +1,9 @@
 import React from "react";
 import { Svg } from './styles'
+import {Link} from '@reach/router'
 
 export const Logo = (props) => (
+    <Link to="/">
     <Svg
         xmlns="http://www.w3.org/2000/svg"
         width={386.787}
@@ -64,4 +66,5 @@ export const Logo = (props) => (
             />
         </g>
     </Svg>
+    </Link>
 );
