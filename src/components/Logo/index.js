@@ -24,13 +24,13 @@ export const Logo = (props) => (
                 y2={0.5}
                 gradientUnits="objectBoundingBox"
             >
-                <stop offset={0} stopColor="red" />
-                <stop offset={0.17} stopColor="#f90" />
-                <stop offset={0.34} stopColor="#ff4" />
-                <stop offset={0.51} stopColor="#6f0" />
-                <stop offset={0.68} stopColor="#09f" />
-                <stop offset={0.85} stopColor="#00f" />
-                <stop offset={1} stopColor="#90f" />
+                <stop offset={0} stopColor="#89f" />
+                <stop offset={0.17} stopColor="#89f" />
+                <stop offset={0.34} stopColor="#89f" />
+                <stop offset={0.51} stopColor="#89f" />
+                <stop offset={0.68} stopColor="#89f" />
+                <stop offset={0.85} stopColor="#89f" />
+                <stop offset={1} stopColor="#89f"/>
             </linearGradient>
             <filter id="a" width="300%" height="300%" x="-100%" y="-100%">
                 <feMorphology
